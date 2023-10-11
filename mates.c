@@ -28,11 +28,8 @@ float division(int a, int b){
     
     float resultado;
 
-    while(b == 0){
-        
-        verificacion(b);
-    }
-    
+    verificacion(b);
+
     resultado = a / b;
     
     return (a / b);

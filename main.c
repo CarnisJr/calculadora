@@ -9,6 +9,11 @@ int main(void){
 
     do{
       
+        printf("---Calculadora---\n");
+        printf("1. Suma\n2. Resta\n3. Multiplicacion\n4. Division\n5. Salir\n");
+        scanf("%d", &selector);
+        system("cls");
+
         switch(selector){
 
         case 1:
@@ -17,7 +22,7 @@ int main(void){
             printf("Ingrese un numero: ");
             scanf("%d", &y);
             resultado = suma(x, y);
-            printf("%d + %d = %d", x, y, resultado);
+            printf("%d + %d = %d\n", x, y, resultado);
             break;
         
         case 2:
@@ -26,7 +31,7 @@ int main(void){
             printf("Ingrese un numero: ");
             scanf("%d", &y);
             resultado = resta(x, y);
-            printf("%d - %d = %d", x, y, resultado);
+            printf("%d - %d = %d\n", x, y, resultado);
             break;
 
         case 3:
@@ -35,7 +40,7 @@ int main(void){
             printf("Ingrese un numero: ");
             scanf("%d", &y);
             resultado = multiplicacion(x, y);
-            printf("%d * %d = %d", x, y, resultado);
+            printf("%d * %d = %d\n", x, y, resultado);
             break;
             
         case 4:
@@ -44,7 +49,7 @@ int main(void){
             printf("Ingrese un numero: ");
             scanf("%d", &y);
             resultado = division(x, y);
-            printf("%d / %d = %0.2f", x, y, resultado);
+            printf("%d / %d = %0.2f\n", x, y, resultado);
             break;
 
         default:
@@ -52,6 +57,8 @@ int main(void){
             break;
             
         }
+        system("pause");
+        system("cls");
     }while(selector != 5);
     
 

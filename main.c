@@ -4,13 +4,13 @@
 
 int main(void){
 
-    int resultado, x, y, selector;
-    float rDivision;
+    int resultado, x, y, selector, numElementos;
+    float rDivision, dividendo, divisor;
 
     do{
       
         printf("---Calculadora---\n");
-        printf("1. Suma\n2. Resta\n3. Multiplicacion\n4. Division\n5. Salir\n");
+        printf("1. Suma\n2. Resta\n3. Multiplicacion\n4. Division\n5. Fibonacci\n6. Salir\n");
         scanf("%d", &selector);
         system("cls");
 
@@ -45,13 +45,26 @@ int main(void){
             
         case 4:
             printf("Ingrese un numero: ");
-            scanf("%d", &x);
+            scanf("%f", &dividendo);
             printf("Ingrese un numero: ");
-            scanf("%d", &y);
-            resultado = division(x, y);
-            printf("%d / %d = %0.2f\n", x, y, resultado);
+            scanf("%f", &divisor);
+            rDivision = division(dividendo, divisor);
+            if(y != 0)
+                printf("%.0f / %.0f = %.2f\n", dividendo, divisor, rDivision);
             break;
 
+        case 5:
+            printf("Secesion de fibonacci\n");
+            printf("Cuantos elementos de la sucesion desea: ");
+            scanf("%d", &numElementos);
+            for(size_t i = 1; i <= numElementos; i++){
+                printf("%d ", fibonacci(i));
+            }
+            puts(" ");
+            break;
+        case 6:
+            printf("Saliendo...\n");
+            break;
         default:
             printf("Opcion no disponible.\n");
             break;
@@ -59,7 +72,7 @@ int main(void){
         }
         system("pause");
         system("cls");
-    }while(selector != 5);
+    }while(selector != 6);
     
 
     return 0;

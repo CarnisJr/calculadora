@@ -4,6 +4,9 @@ int resta(int a, int b);
 
 int multiplicacion(int a, int b);
 
-float division(int a, int b);
+float division(float a, float b);
 
-void verificiacion(int b);
+void verificiacion();
+
+//función recursiva Fibonacci
+int fibonacci(int n);

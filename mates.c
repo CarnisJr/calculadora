@@ -15,22 +15,36 @@ int multiplicacion(int a, int b){
     return (a * b);
 }
 
-void verificacion(int b){
+void verificacion(){
 
-   if(b == 0){
-
-    printf("Division indefinida");
-   }
-
+    printf("Indefinido\n");
 }
 
-float division(int a, int b){
+float division(float a, float b){
     
     float resultado;
 
-    verificacion(b);
+    if(b == 0){
 
-    resultado = a / b;
-    
-    return (a / b);
+        printf("Indefinido\n");
+    }else{
+
+        resultado = (a / b);
+        return resultado;
+    }  
+}
+
+int fibonacci(int n){
+
+    int fn;
+
+    if(n == 0 || n == 1){
+
+        fn = n;
+    }else{
+
+        fn = fibonacci(n - 1) + fibonacci(n - 2);
+    }
+
+    return fn;
 }
